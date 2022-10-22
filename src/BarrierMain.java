@@ -1,9 +1,19 @@
 import java.util.concurrent.CyclicBarrier;
 
+/**
+ * Demonstration of the synchronization of threads at a barrier
+ * @see java.util.concurrent.CyclicBarrier
+ *
+ * @author <a href="mailto:everton.cavalcante@ufrn.br">Everton Cavalcante</a>
+ */
 public class BarrierMain {
-	
+	/** Number of threads to synchronize */
 	private static final int NUM_THREADS = 2;
 
+	/**
+	 * Main method
+	 * @param args Command line arguments
+	 */
 	public static void main(String[] args) {
 		Runnable barrierAction = new Runnable() {
 			public void run() {
@@ -26,5 +36,4 @@ public class BarrierMain {
 			e.printStackTrace();
 		}
 	}
-
 }
